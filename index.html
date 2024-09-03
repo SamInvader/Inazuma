@@ -34,7 +34,9 @@
         <p>To get started with the Inazuma Football Game, follow these steps:</p>
         <p>Ensure you have Python installed on your machine to run the game.</p>
         <p>Download it on my <a href="https://github.com/SamInvader/Inazuma">GitHub link</a>.</p>
+        <button class="download-button" onclick="downloadFile()">Download Now</button>
         <p>Visit <a href="https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives">this guide</a> if you don't know how to download repositories on GitHub.</p>
+        <p>⭐ If you enjoy the game, please consider starring the repository on GitHub to show your support!</p>
     </section>
 
     <section id="how-to-play">
@@ -54,6 +56,14 @@
         <p>&copy; 2024 SamInvader. This project is open-source and available on <a href="https://github.com/SamInvader/Inazuma">GitHub</a>.</p>
     </footer>
 
-    <!-- Optional: Add Google Analytics tracking code here -->
+    <script>
+        function downloadFile() {
+            // This function triggers the download of a local zip file named "game.zip"
+            const link = document.createElement('a');
+            link.href = 'game.zip'; // Path to your local zip file
+            link.download = 'Inazuma_Football_Game.zip';
+            link.click();
+        }
+    </script>
 </body>
 </html>
