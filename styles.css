@@ -13,6 +13,9 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Style the header */
@@ -38,6 +41,7 @@ section {
     background: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
 }
 
 /* Styles for section titles */
@@ -71,8 +75,12 @@ footer {
     padding: 10px;
     background-color: #333;
     color: white;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
 }
 
+/* Footer link styles */
 footer a {
     color: #008cba;
     text-decoration: none;
