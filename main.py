@@ -1,4 +1,4 @@
-from deck import MyGame
+from game import MyGame
 a=MyGame()
 aa=0
 bb=0
