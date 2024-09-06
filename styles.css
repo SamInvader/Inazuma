@@ -110,3 +110,30 @@ footer a:hover {
 .download-button:hover {
     background-color: #005f7f; /* Darker blue on hover */
 }
+
+/* Styles for the Advertise section */
+#ads {
+    border: 2px dashed #008cba;
+    padding: 20px;
+    text-align: center;
+    background-color: #eaf6fb;
+}
+
+#ads h2 {
+    color: #005f7f;
+}
+
+#ads p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+#ads a {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+#ads a:hover {
+    color: #c9302c;
+    text-decoration: underline;
+}
