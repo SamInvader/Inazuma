@@ -77,7 +77,7 @@ footer {
     padding: 10px;
     background-color: #333;
     color: white;
-    position: sticky;
+    position:static ;
     bottom: 0;
     width: 100%;
 }
