@@ -7,7 +7,148 @@
     <meta name="description" content="A CLI Inazuma Football Game with iconic moves and single-player vs computer gameplay.">
     <meta name="keywords" content="Inazuma Eleven, football game, CLI game, single-player, computer opponent, open-source, GitHub">
     <title>Inazuma Football Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic reset to remove default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Set a global font style */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #008cba;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Section styles */
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        /* Styles for section titles */
+        h2 {
+            margin-bottom: 15px;
+            color: #008cba;
+        }
+
+        /* List styles */
+        ul {
+            list-style: disc inside;
+        }
+
+        ol {
+            list-style: decimal inside;
+        }
+
+        /* Link styles */
+        a {
+            color: #008cba;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: static;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Footer link styles */
+        footer a {
+            color: #008cba;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Styles for the download button */
+        .download-button {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 10px auto;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .download-button:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .download-button:active {
+            background-color: #1e7e34;
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styles for the Advertise section */
+        #ads {
+            border: 2px dashed #008cba;
+            padding: 20px;
+            text-align: center;
+            background-color: #eaf6fb;
+        }
+
+        #ads h2 {
+            color: #005f7f;
+        }
+
+        #ads p {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -47,22 +188,6 @@
         </ol>
     </section>
 
-    <section id="comment-section">
-        <h2>Leave a Comment</h2>
-        <form id="commentForm" action="send_email.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="comment">Comment:</label>
-            <textarea id="comment" name="comment" rows="4" required></textarea>
-
-            <button type="submit" class="submit-button">Submit</button>
-        </form>
-    </section>
-
     <section id="contributing">
         <h2>Contributing</h2>
         <p>We welcome contributions from the community! If you'd like to contribute to the game, please fork the repository and submit a pull request. Make sure to follow the contribution guidelines outlined in the repository.</p>
@@ -89,9 +214,8 @@
 
     <script>
         function downloadFile() {
-            // This function triggers the download of a local zip file named "game.zip"
             const link = document.createElement('a');
-            link.href = 'game.zip'; // Path to your local zip file
+            link.href = 'game.zip'; 
             link.download = 'Inazuma_Football_Game.zip';
             link.click();
         }
