@@ -67,6 +67,23 @@
         <p>This site hosts ads to support the ongoing development of the game. If you're interested in advertising on this page, please contact me at <a href="mailto:olawoleolaniran@gmail.com">olawoleolaniran@gmail.com</a>.</p>
     </section>
 
+    <section id="comments">
+        <h2>Leave a Comment</h2>
+        <form id="commentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <p id="formFeedback"></p>
+    </section>
+
     <footer>
         <p>&copy; 2024 SamInvader. This project is open-source and available on <a href="https://github.com/SamInvader/Inazuma">GitHub</a>.</p>
     </footer>
@@ -79,6 +96,28 @@
             link.download = 'Inazuma_Football_Game.zip';
             link.click();
         }
+
+        // Handle form submission to send data to your email
+        document.getElementById('commentForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const comment = document.getElementById('comment').value;
+
+            // Email sending logic here (example using EmailJS)
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+                name: name,
+                email: email,
+                comment: comment
+            })
+            .then(function () {
+                document.getElementById('formFeedback').textContent = 'Comment sent successfully!';
+            }, function (error) {
+                document.getElementById('formFeedback').textContent = 'Failed to send comment. Try again later.';
+            });
+        });
     </script>
 </body>
 </html>
