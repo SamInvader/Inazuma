@@ -92,33 +92,33 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Updated styles for the download button */
-.download-button {
+/* Updated styles for the submit button */
+.submit-button {
     display: inline-block;
-    padding: 12px 24px;
-    margin: 20px auto;
+    padding: 12px 20px;
+    margin: 10px auto;
     font-size: 16px;
     font-weight: bold;
-    color: white;
-    background-color: #ff6f61;
+    color: #fff;
+    background-color: #28a745; /* Green color */
     border: none;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.download-button:hover {
-    background-color: #e65c50;
-    transform: translateY(-3px);
+.submit-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.download-button:active {
-    background-color: #cc5448;
-    transform: translateY(0);
+.submit-button:active {
+    background-color: #1e7e34;
+    transform: translateY(1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -136,4 +136,5 @@ footer a:hover {
 
 #ads p {
     font-size: 1.1em;
+    margin-top: 10px;
 }
