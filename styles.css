@@ -92,23 +92,34 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Styles for the download button */
+/* Updated styles for the download button */
 .download-button {
-    display: block;
-    width: 200px;
-    margin: 20px auto; /* Center the button */
-    padding: 15px 20px;
-    font-size: 1.2em;
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 20px auto;
+    font-size: 16px;
+    font-weight: bold;
     color: white;
-    background-color: #008cba;
+    background-color: #ff6f61;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .download-button:hover {
-    background-color: #005f7f; /* Darker blue on hover */
+    background-color: #e65c50;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.download-button:active {
+    background-color: #cc5448;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Styles for the Advertise section */
@@ -125,4 +136,4 @@ footer a:hover {
 
 #ads p {
     font-size: 1.1em;
-   
+}
