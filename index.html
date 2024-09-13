@@ -148,6 +148,36 @@
             font-size: 1.1em;
             margin-top: 10px;
         }
+
+        /* Feedback button */
+        .feedback-button {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 10px auto;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #ff5733;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .feedback-button:hover {
+            background-color: #e44d26;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .feedback-button:active {
+            background-color: #cc3c1e;
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -201,6 +231,12 @@
             <li>Click on the "Star" button at the top right of the page.</li>
             <li>Your support helps the project grow!</li>
         </ol>
+    </section>
+
+    <section id="feedback">
+        <h2>Help Us Improve</h2>
+        <p>We are constantly looking to make the game better! Please fill out this form to provide feedback and suggestions:</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0BzCK_vXEhBpW3GZZ1LHd9LVuvHxxX0u6GdMCMTVgP1re6Q/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link" class="feedback-button" target="_blank">Give Feedback</a>
     </section>
 
     <section id="ads">
